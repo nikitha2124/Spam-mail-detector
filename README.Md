@@ -109,11 +109,4 @@ Ham
 * Deployment on cloud platforms
 * Improved accuracy with ensemble models
 
-## Author
-
-Nikitha
-
-B.Tech – Data Science
-
-Machine Learning & AI Enthusiast
 
