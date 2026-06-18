@@ -1,256 +1,119 @@
-# 🚀 AI-Powered Stock Analytics Platform
+# Spam Mail Detector
 
-A full-stack stock market analytics platform that provides real-time stock insights, AI-powered investment recommendations, portfolio tracking, and trade history management. Built using React.js, Node.js, Express.js, MongoDB, Socket.io, and TradingView Charts.
+## Overview
 
----
+Spam Mail Detector is a Machine Learning and Natural Language Processing (NLP) based web application that classifies emails and messages as **Spam** or **Ham (Not Spam)**. The project uses text preprocessing, TF-IDF vectorization, and machine learning algorithms to accurately identify unwanted messages.
 
-## 📖 Overview
+## Features
 
-The AI-Powered Stock Analytics Platform helps users analyze stock market trends and make informed investment decisions through real-time data visualization and AI-generated recommendations.
+* Real-time spam message detection
+* Text preprocessing and cleaning
+* TF-IDF feature extraction
+* Naive Bayes classification model
+* Logistic Regression model comparison
+* Confidence score prediction
+* Interactive Streamlit web interface
+* Model performance evaluation using Confusion Matrix
 
-The application combines modern web technologies with financial analytics to deliver an interactive dashboard for investors and learners.
+## Technologies Used
 
----
+* Python
+* Scikit-learn
+* Pandas
+* NumPy
+* NLTK
+* Streamlit
+* Joblib
+* Matplotlib
 
-## ✨ Features
+## Project Structure
 
-### 📊 Real-Time Stock Dashboard
+spam-mail-detector/
 
-* Live stock price tracking
-* Market trend analysis
-* Interactive TradingView charts
-* Stock search functionality
-* Real-time updates using Socket.io
+├── data/
+│   └── spam.csv
 
-### 🤖 AI Analytics Engine
+├── models/
+│   ├── spam_model.pkl
+│   └── tfidf.pkl
 
-* Buy/Sell recommendations
-* Confidence score generation
-* Market trend prediction
-* Risk assessment analysis
-* Investment insights dashboard
+├── results/
+│   └── model_report.txt
 
-### 💼 Portfolio Management
+├── src/
+│   ├── preprocess.py
+│   ├── train_model.py
+│   ├── predict.py
+│   └── model_comparison.py
 
-* Track stock holdings
-* Monitor investment performance
-* Calculate profit/loss
-* Portfolio overview dashboard
-
-### 📜 Trade History
-
-* Record Buy/Sell transactions
-* Store historical trades in MongoDB
-* View transaction history
-* Track trading activity
-
-### ⚡ Real-Time Communication
-
-* Live stock updates
-* Socket.io integration
-* Instant dashboard refresh
-
----
-
-## 🛠️ Tech Stack
-
-### Frontend
-
-* React.js
-* JavaScript (ES6+)
-* HTML5
-* CSS3
-* TradingView Widgets
-
-### Backend
-
-* Node.js
-* Express.js
-* Socket.io
-
-### Database
-
-* MongoDB
-* Mongoose
-
-### APIs & Services
-
-* Alpha Vantage API
-* TradingView Charts
-
----
-
-## 📂 Project Structure
-
-```text
-stock-ai-analyzer/
-│
-├── client/
-│   ├── public/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── App.jsx
-│   │   └── main.jsx
-│   └── package.json
-│
-├── server/
-│   ├── models/
-│   │   ├── Stock.js
-│   │   ├── Portfolio.js
-│   │   └── Trade.js
-│   │
-│   ├── server.js
-│   └── package.json
-│
+├── app.py
+├── main.py
+├── requirements.txt
 ├── README.md
 └── .gitignore
-```
 
-## ⚙️ Installation
+## Machine Learning Workflow
 
-### 1️⃣ Clone Repository
+1. Data Collection
+2. Text Preprocessing
+3. Feature Extraction using TF-IDF
+4. Model Training
+5. Model Evaluation
+6. Spam Prediction
+7. Web Application Deployment
 
-```bash
-git clone https://github.com/yourusername/stock-ai-analyzer.git
-cd stock-ai-analyzer
-```
+## Model Performance
 
-### 2️⃣ Backend Setup
+* Naive Bayes Classifier
+* Logistic Regression Classifier
+* Accuracy Comparison
+* Confusion Matrix Analysis
 
-```bash
-cd server
-npm install
-npm start
-```
+## Installation
 
-Backend runs on:
+Clone the repository:
 
-```text
-http://localhost:5000
-```
+git clone https://github.com/nikitha2124/Spam-mail-detector.git
 
-### 3️⃣ Frontend Setup
+Navigate to the project directory:
 
-```bash
-cd client
-npm install
-npm run dev
-```
+cd Spam-mail-detector
 
-Frontend runs on:
+Install dependencies:
 
-```text
-http://localhost:5173
-```
+pip install -r requirements.txt
 
----
+Run the application:
 
-## 🔑 Environment Variables
+streamlit run app.py
 
-Create a `.env` file inside the server directory:
+## Example
 
-```env
-MONGO_URI=your_mongodb_connection_string
-ALPHA_VANTAGE_API_KEY=your_api_key
-PORT=5000
-```
+Input:
+Congratulations! You have won a free iPhone. Click here to claim.
 
----
+Output:
+Spam
 
-## 📈 Key Functionalities
+Input:
+Hi, are we meeting tomorrow for the project discussion?
 
-### Dashboard
+Output:
+Ham
 
-* Stock search
-* Real-time stock visualization
-* Trend indicators
-* Market confidence scores
+## Future Enhancements
 
-### AI Analytics
+* Deep Learning-based spam detection
+* Email attachment analysis
+* Multi-language spam detection
+* Deployment on cloud platforms
+* Improved accuracy with ensemble models
 
-* Recommendation generation
-* Market sentiment evaluation
-* Confidence score calculation
-* Risk analysis
+## Author
 
-### Portfolio
+Nikitha
 
-* Investment tracking
-* Portfolio valuation
-* Profit/Loss monitoring
+B.Tech – Data Science
 
-### Trade History
+Machine Learning & AI Enthusiast
 
-* Buy transactions
-* Sell transactions
-* Historical record storage
-
----
-
-## 🎯 Learning Outcomes
-
-This project demonstrates:
-
-* Full Stack Web Development
-* REST API Development
-* MongoDB Database Design
-* Real-Time Web Applications
-* Financial Data Visualization
-* State Management in React
-* Socket.io Integration
-* AI-Based Decision Support Systems
-
----
-
-## 🚀 Future Enhancements
-
-* RSI & MACD technical indicators
-* Watchlist functionality
-* User Authentication (JWT)
-* News sentiment analysis
-* Advanced AI prediction models
-* Multi-stock comparison
-* Portfolio performance analytics
-* Cloud deployment (AWS/Render/Vercel)
-
----
-
-## 📸 Screenshots
-
-### Dashboard
-
-* Live market monitoring
-* Interactive charts
-* AI confidence metrics
-
-### AI Analytics
-
-* Recommendation engine
-* Trend analysis
-* Risk insights
-
-### Trade History
-
-* Transaction records
-* Investment tracking
-
----
-
-## 👨‍💻 Author
-
-**Nikitha Pakanati**
-
----
-
-## ⭐ Support
-
-If you found this project useful:
-
-* ⭐ Star this repository
-* 🍴 Fork the project
-* 📢 Share feedback
-* 🤝 Contribute improvements
-
----
-
-**Built with React.js, Node.js, MongoDB, Socket.io, and a passion for financial technology.**
